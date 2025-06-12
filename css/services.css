@@ -1,0 +1,208 @@
+/* Services Page Styles */
+.services-container {
+    min-height: 100%;
+    background: linear-gradient(to right, #f3f4f6, #e5e7eb, #d1d5db);
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode .services-container {
+    background: linear-gradient(to right, #374151, #1f2937, #111827);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Medium screens: 768px and above */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 800px;
+    }
+}
+
+/* Large screens: 1024px and above */
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+}
+
+.service-card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #f59e0b;
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: translateY(4px);
+    transition: all 0.5s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card-text {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    padding: 0 1rem;
+}
+
+.text-primary {
+    display: block;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #f59e0b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+}
+
+.text-secondary {
+    display: block;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: #1f2937;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+}
+
+body.dark-mode .text-secondary {
+    color: white;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(245, 158, 11, 0.4));
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.1);
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #f59e0b;
+    border: 2px solid #f59e0b;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.theme-toggle:hover {
+    background-color: #f59e0b;
+    color: white;
+    transform: rotate(360deg);
+}
+
+body.dark-mode .theme-toggle {
+    color: #f59e0b;
+    border-color: #f59e0b;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #f59e0b;
+    color: #1f2937;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 1rem;
+    }
+
+    .service-card {
+        max-width: 100%;
+    }
+
+    .card-text {
+        top: 0.5rem;
+    }
+
+    .text-primary {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    .text-secondary {
+        font-size: clamp(1rem, 4vw, 1.8rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        padding: 0.5rem;
+    }
+
+    .services-grid {
+        gap: 1rem;
+    }
+
+    .service-card {
+        border-width: 2px;
+    }
+
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve touch interactions for mobile */
+@media (hover: none) {
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-card:active {
+        transform: scale(0.98);
+    }
+
+    .service-image:hover {
+        transform: none;
+    }
+} 
