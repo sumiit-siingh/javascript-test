@@ -17,3 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // You can add other global or page-specific JavaScript here
     // For example, if you have a contact form, you might add form submission logic here
 }); 
+document.getElementById("menu-btn").addEventListener("click", () => {
+  window.location.href = "/menu.html";
+});
+
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  const homepage = document.getElementById("homepage");
+  homepage.classList.toggle("dark");
+  homepage.classList.toggle("light");
+});

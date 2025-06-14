@@ -16,24 +16,49 @@
                 <li><a href="pages/contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- <button id="theme-toggle">Toggle Theme</button> -->
     </header>
 
-    <main>
-        <section id="home">
-            <h1>Welcome to My Frontend Project</h1>
-            <p>This is a clean and organized frontend project structure with multiple pages.</p>
-            <div class="cta-buttons">
-                <a href="pages/about.html" class="btn">Learn More</a>
-                <a href="pages/services.html" class="btn">Our Services</a>
-                <a href="pages/contact.html" class="btn">Contact Us</a>
-            </div>
-        </section>
-    </main>
+
+  <!-- Container -->
+  <div id="homepage" class="container light">
+    <!-- Background Image -->
+    <img
+      src="https://res.cloudinary.com/dq829orud/image/upload/v1744634683/top-view-delicious-meat-soup-with-potatoes-greens-dark-blue-desk_xh01bu.jpg"
+      alt="Soup"
+      class="background-image"
+    />
+
+    <!-- Foreground Box -->
+    <div class="content-box">
+      <!-- Text Content -->
+      <div class="text-section">
+        <h1>Your Delicious Mood Food is waiting</h1>
+        <p>
+          Experience the perfect blend of taste and convenience with our premium food delivery service. Fresh ingredients, expert chefs, and lightning-fast delivery.
+        </p>
+        <button id="menu-btn">View Menu →</button>
+        <button id="theme-toggle">Toggle Theme</button>
+      </div>
+
+      <!-- Image -->
+      <div class="image-section">
+        <img
+          src="https://res.cloudinary.com/dq829orud/image/upload/v1749020555/istockphoto-1348318884-612x612-removebg-preview_pqetqq.png"
+          alt="Food"
+          class="food-image"
+        />
+      </div>
+    </div>
+  </div>
+
+
 
     <footer>
         <p>&copy; 2024 My Frontend Project. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html> 

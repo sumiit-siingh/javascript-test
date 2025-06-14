@@ -127,3 +127,119 @@ footer {
     width: 100%;
     margin-top: auto;
 } 
+/* Reset & global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Light / Dark Themes */
+.container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.container.light {
+  background-color: #f9dbbd;
+}
+.container.dark {
+  background-color: #374151;
+}
+
+/* Background Image */
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+.container.light .background-image {
+  opacity: 0.7;
+}
+.container.dark .background-image {
+  opacity: 0.3;
+}
+
+/* Foreground Box */
+.content-box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Text Section */
+.text-section {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.text-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.text-section p {
+  font-family: serif;
+  color: #333;
+}
+.container.dark .text-section p {
+  color: #ccc;
+}
+.text-section button {
+  padding: 0.5rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transition: background-color 0.3s ease;
+}
+.text-section button:hover {
+  background-color: #333;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food-image {
+  width: 180px;
+  max-height: 200px;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .food-image {
+    width: 300px;
+    max-height: none;
+  }
+}
