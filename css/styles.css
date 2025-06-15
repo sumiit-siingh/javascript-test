@@ -15,6 +15,18 @@ body {
 }
 
 /* Header styles */
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.navbar ul{
+  cursor: pointer;
+}
+#welcome-user{
+  color: white;
+}
 header {
     background-color: #2c3e50;
     padding: 1rem 0;
@@ -49,13 +61,14 @@ main {
     margin: 0;
 }
 
-section {
-    margin-bottom: 0;
+.content-box {
+    margin-bottom: 5rem;
+
 }
 
 h1 {
     color: #2c3e50;
-    margin-bottom: 1rem;
+    /* margin-bottom: rem; */
 }
 
 /* Contact form styles */
@@ -80,6 +93,13 @@ input, textarea {
 textarea {
     min-height: 150px;
     resize: vertical;
+}
+
+.btn-menu-toggle{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
 }
 
 button {
@@ -144,7 +164,7 @@ body, html {
 .container {
   position: relative;
   min-height: 100vh;
-  padding-top: 6rem;
+  padding-top:1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,13 +201,15 @@ body, html {
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   border-radius: 2rem;
   padding: 2rem;
-  max-width: 600px;
-  width: 90%;
+ 
+  width: 70%; 
+  max-height: 40%;
+ 
 }
 
 /* Text Section */
@@ -215,11 +237,21 @@ body, html {
   color: white;
   border: none;
   cursor: pointer;
-  border-top-left-radius: 1rem;
+  
+  /* width: 150px;
+  flex: row; */
+  
   border-top-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   transition: background-color 0.3s ease;
 }
+.heading-text{
+  font-size: smaller;
+}
+/* #menu-btn{
+width: fit-content;
+
+} */
 .text-section button:hover {
   background-color: #333;
 }
@@ -241,5 +273,33 @@ body, html {
   .food-image {
     width: 300px;
     max-height: none;
+  }
+}
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full screen */
+  background-color: rgba(0, 0, 0, 0.05); /* optional background */
+  padding: 1rem;
+}
+
+.signup-card {
+  width: 50vw;   /* 50% of viewport width */
+  height: 50vh;  /* 50% of viewport height */
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .signup-card {
+    width: 90vw;
+    height: auto;
   }
 }

@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Frontend Project</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Frontend Project</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/services.html">Services</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- <button id="theme-toggle">Toggle Theme</button> -->
-    </header>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/services.html">Services</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+      <ul id="auth-links">
+        <li><a href="pages/login.html">Login</a></li>
+        <li><a href="pages/signup.html">Signup</a></li>
+      </ul>
+      <ul id="user-links" style="display: flex; align-items: center  ;">
+        <li><span id="welcome-user"></span></li>
+        <li><button onclick="logout()">Logout</button></li>
+      </ul>
+
+    </nav>
+    <!-- <button id="theme-toggle">Toggle Theme</button> -->
+  </header>
 
 
   <!-- Container -->
@@ -25,40 +36,43 @@
     <!-- Background Image -->
     <img
       src="https://res.cloudinary.com/dq829orud/image/upload/v1744634683/top-view-delicious-meat-soup-with-potatoes-greens-dark-blue-desk_xh01bu.jpg"
-      alt="Soup"
-      class="background-image"
-    />
+      alt="Soup" class="background-image" />
 
     <!-- Foreground Box -->
-    <div class="content-box">
+    <div class="content-box" >
       <!-- Text Content -->
       <div class="text-section">
-        <h1>Your Delicious Mood Food is waiting</h1>
+        <h1 class="heading-text">Your Delicious Mood Food is waiting</h1>
         <p>
-          Experience the perfect blend of taste and convenience with our premium food delivery service. Fresh ingredients, expert chefs, and lightning-fast delivery.
+          Experience the perfect blend of taste and convenience with our premium food delivery service. Fresh
+          ingredients, expert chefs, and lightning-fast delivery.
         </p>
-        <button id="menu-btn">View Menu →</button>
-        <button id="theme-toggle">Toggle Theme</button>
+        <div class="btn-menu-toggle">
+          <button id="menu-btn">View Menu →</button>
+          <button id="theme-toggle">Toggle Theme</button>
+        </div>
+
       </div>
 
       <!-- Image -->
       <div class="image-section">
         <img
           src="https://res.cloudinary.com/dq829orud/image/upload/v1749020555/istockphoto-1348318884-612x612-removebg-preview_pqetqq.png"
-          alt="Food"
-          class="food-image"
-        />
+          alt="Food" class="food-image" />
       </div>
     </div>
   </div>
 
 
 
-    <footer>
-        <p>&copy; 2024 My Frontend Project. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 My Frontend Project. All rights reserved.</p>
+  </footer>
+  
 
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
 </body>
-</html> 
+
+</html>
